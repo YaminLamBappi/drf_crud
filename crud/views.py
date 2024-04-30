@@ -29,8 +29,6 @@ def add_family(request):
 
 
 
-    
-
 @method_decorator(csrf_exempt, name='dispatch')
 class FamilyApi(View):
     def post(self, request, *args, **kwargs):
