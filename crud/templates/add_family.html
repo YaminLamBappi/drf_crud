@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Family</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for form fields */
+        .input-field {
+            border: 2px solid #cbd5e0;
+            transition: border-color 0.3s;
+        }
+
+        .input-field:hover,
+        .input-field:focus {
+            border-color: #4a90e2;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white shadow-md rounded-lg p-8 max-w-md w-full">
+        <h1 class="text-3xl font-bold mb-4 text-center">Add Family</h1>
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Name" class="input-field p-2 rounded-md w-full">
+            <input type="text" name="phone" placeholder="Phone" class="input-field p-2 rounded-md w-full">
+            <input type="text" name="address" placeholder="Address" class="input-field p-2 rounded-md w-full">
+            <button type="submit"
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
